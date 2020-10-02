@@ -1,2 +1,1 @@
-# test
-QWERTY
+# This is my first program!
