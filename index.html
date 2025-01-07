@@ -7,7 +7,7 @@
   </head>
   <body>
     <script>
-      const cheekInput = (inp, textDef) => inp !== null && inp !== "" ? inp.trim() : textDef;
+      const cheekInput = (inp, textDef) => inp.trim() !== null && inp.trim() !== "" ? inp.trim() : textDef;
       
       var name = prompt("Введите Ваше имя:");
       name = cheekInput(name, "[ВАШЕ ИМЯ]");
@@ -15,7 +15,7 @@
       
       var age = prompt("Введите Ваш возраст:");
       age = cheekInput(age, "[ВАШ ВОЗРАСТ]");
-      age = typeof(+age) === "number" ? +age : "[ВАШ ВОЗРАСТ]";
+      // age = typeof(+age) === "number" ? +age : "[ВАШ ВОЗРАСТ]";
 
       
       
