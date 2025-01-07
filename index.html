@@ -33,12 +33,12 @@
       var item = prompt("Что Вы продаете?");
       item = cheekInput(item, "[ПРЕДМЕТ]");
       document.body.innerHTML =
-        "<h2>Реклама</h2>\n" +
-        `${name}, ${typeof(age) == "number" ? new Date().getFullYear() - age : new Date().getFullYear() + " - " + age} [${age}] г. р.\n` +
-        `Продает ${item}./n` +
-        "Связаться с продавцом:\n" +
-        `Телефон: ${phoneNum};/n` +
-        `Email: ${email}.`;
+        "<h2>Реклама</h2>" +
+        `<p>${name} (${age})<br>` +
+        `Продает ${item}.<br>` +
+        "Связаться с продавцом:<br>" +
+        `Телефон: ${phoneNum};<br>` +
+        `Email: ${email}.</p>`;
     </script>
   </body>
 </html>
