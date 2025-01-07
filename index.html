@@ -1,48 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru>
   <head>
-    <title>Бесполезный сайт</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реклама</title>
   </head>
   <body>
     <script>
-      var a = prompt("Введите ФИО:");
-      var b = prompt("Введите Вашу электронную почту:");
-      var c = prompt("Введите Ваш возраст:");
-      var d = prompt("Введите Ваш вес (в кг):");
-      var e = prompt("Введите Ваш рост (в см):");
-      var f = prompt("Введите Ваше любимое число:");
-      var g = prompt("Введите Ваш размер ноги:");
-      var h = prompt("Введите Ваш номер телефона:");
-    </script>
-    <br><script>
-      document.write("Реклама!!!");
-    </script>
-    <br><script>
-      document.write(a + ".");
-    </script>
-    <br><script>
-      document.write("Email:" + b + ".");
-    </script>
-    <br><script>
-      document.write("Возраст:" + c + " лет.");
-    </script>
-    <br><script>
-      document.write("Вес:" + d + " кг.");
-    </script>
-    <br><script>
-      document.write("Рост:" + e + "см.");
-    </script>
-    <br><script>
-      document.write("Размер ноги:" + g + ".");
-    </script>
-    <br><script>
-      document.write("Любимое число:" + f + ".");
-    </script>
-    <br><script>
-      document.write("Тел.:" + h);
-    </script>
-    <br><script>
-      document.write("Продаёт котят!");
+      const cheekInput = (inp, textDef) => inp !== null && inp !== "" ? inp.trim() : textDef;
+      
+      var name = prompt("Введите Ваше имя:");
+      name = cheekInput(name, "[ВАШЕ ИМЯ]");
+      name = name.charAt(0).toUpperCase() + name.slice(1);
+      
+      var age = prompt("Введите Ваш возраст:");
+      age = cheekInput(age, "[ВАШ ВОЗРАСТ]");
+      age = typeof(+age) === "number" ? +age : "[ВАШ ВОЗРАСТ]";
+
+      
+      
+      var email = prompt("Введите Вашу электронную почту:");
+      email = cheekInput(email, "[ВАША ЭЛЕКТРОННАЯ ПОЧТА]");
+      
+      //var weight = prompt("Введите Ваш вес (в кг):");
+      //var height = prompt("Введите Ваш рост (в см):");
+      //var favNum = prompt("Введите Ваше любимое число:");
+      //var footHeight = prompt("Введите Ваш размер ноги:");
+      
+      var phoneNum = prompt("Введите Ваш номер телефона:");
+      phoneNum = cheekInput(phoneNum, "[ВАШ НОМЕР ТЕЛЕФОНА]");
+      
+      var item = prompt("Что Вы продаете?");
+      item = cheekInput(item, "[ПРЕДМЕТ]");
+      document.body.innerHTML =
+        "<h2>Реклама</h2>\n" +
+        `${name}, ${typeof(age) == "number" ? new Date().getFullYear() - age : new Date().getFullYear() + " - " + age} [${age}] г. р.\n` +
+        `Продает ${item}./n` +
+        "Связаться с продавцом:\n" +
+        `Телефон: ${phoneNum};/n` +
+        `Email: ${email}.`;
     </script>
   </body>
 </html>
